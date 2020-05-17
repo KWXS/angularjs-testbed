@@ -144,7 +144,8 @@ export class TestBed {
       let $scope = $rootScope.$new();
       element = $componentController(componentName, {
         $scope: $scope,
-        $element: angular.element('<div></div>')
+        $element: angular.element('<div></div>'),
+        $attrs: {}
       });
     });
     (element as any).componentName = kebabToCamel(componentName);
