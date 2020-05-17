@@ -19,15 +19,15 @@ export default {
     // uglify()
   ],
   targets: [
+    // {
+    //   dest: 'dist/' + pkg.main,
+    //   format: 'umd',
+    //   exports: 'named',
+    //   moduleName: pkg.name,
+    //   sourceMap: true
+    // },
     {
-      dest: 'dist/' + pkg.main,
-      format: 'umd',
-      exports: 'named',
-      moduleName: pkg.name,
-      sourceMap: true
-    },
-    {
-      dest: 'dist/' + pkg.module,
+      dest: pkg.module,
       format: 'es',
       sourceMap: true
     }
