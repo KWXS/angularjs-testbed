@@ -171,9 +171,6 @@ var TestBed = /** @class */ (function () {
         this._instantiated = true;
     };
     TestBed.prototype._createModule = function () {
-        // const providers = this._providers.concat([{provide: TestBed, useValue: this}]);
-        // const declarations = [...this._declarations];
-        // const imports = [this.ngModule, this._imports];
         var providers = this._providers;
         var declarations = this._declarations;
         var imports = this._imports;

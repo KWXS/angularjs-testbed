@@ -79,6 +79,7 @@ export class TestBed {
     this._declarations = [];
     this._imports = [];
     this._instantiated = false;
+
     // this._activeFixtures.forEach((fixture) => {
     //   try {
     //     fixture.destroy();
@@ -124,9 +125,6 @@ export class TestBed {
   }
 
   private _createModule(): any {
-    // const providers = this._providers.concat([{provide: TestBed, useValue: this}]);
-    // const declarations = [...this._declarations];
-    // const imports = [this.ngModule, this._imports];
     const providers = this._providers;
     const declarations = this._declarations;
     const imports = this._imports;
