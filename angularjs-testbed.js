@@ -131,15 +131,14 @@ var TestBed = /** @class */ (function () {
         this._declarations = [];
         this._imports = [];
         this._instantiated = false;
-        this._activeFixtures.forEach(function (fixture) {
-            try {
-                fixture.destroy();
-            }
-            catch (e) {
-                console.error('Error during cleanup of component', fixture.componentInstance);
-            }
-        });
-        this._activeFixtures = [];
+        // this._activeFixtures.forEach((fixture) => {
+        //   try {
+        //     fixture.destroy();
+        //   } catch (e) {
+        //     console.error('Error during cleanup of component', fixture.componentInstance);
+        //   }
+        // });
+        // this._activeFixtures = [];
     };
     TestBed.prototype.compileComponents = function () {
         this._initIfNeeded();
@@ -161,7 +160,7 @@ var TestBed = /** @class */ (function () {
             return new ComponentFixture(componentRef);
         };
         var fixture = initComponent();
-        this._activeFixtures.push(fixture);
+        // this._activeFixtures.push(fixture);
         return fixture;
     };
     TestBed.prototype._initIfNeeded = function () {
