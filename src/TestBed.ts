@@ -79,14 +79,14 @@ export class TestBed {
     this._declarations = [];
     this._imports = [];
     this._instantiated = false;
-    this._activeFixtures.forEach((fixture) => {
-      try {
-        fixture.destroy();
-      } catch (e) {
-        console.error('Error during cleanup of component', fixture.componentInstance);
-      }
-    });
-    this._activeFixtures = [];
+    // this._activeFixtures.forEach((fixture) => {
+    //   try {
+    //     fixture.destroy();
+    //   } catch (e) {
+    //     console.error('Error during cleanup of component', fixture.componentInstance);
+    //   }
+    // });
+    // this._activeFixtures = [];
   }
 
   compileComponents() {
@@ -111,7 +111,7 @@ export class TestBed {
     };
 
     const fixture = initComponent();
-    this._activeFixtures.push(fixture);
+    // this._activeFixtures.push(fixture);
     return fixture;
   }
 
