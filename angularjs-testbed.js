@@ -193,7 +193,8 @@ var TestBed = /** @class */ (function () {
             var $scope = $rootScope.$new();
             element$$1 = $componentController(componentName, {
                 $scope: $scope,
-                $element: element('<div></div>')
+                $element: element('<div></div>'),
+                $attrs: {}
             });
         });
         element$$1.componentName = kebabToCamel(componentName);
