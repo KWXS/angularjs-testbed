@@ -19,13 +19,6 @@ export default {
     // uglify()
   ],
   targets: [
-    // {
-    //   dest: 'dist/' + pkg.main,
-    //   format: 'umd',
-    //   exports: 'named',
-    //   moduleName: pkg.name,
-    //   sourceMap: true
-    // },
     {
       dest: pkg.module,
       format: 'es',
