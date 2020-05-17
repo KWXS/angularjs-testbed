@@ -144,12 +144,10 @@ export class TestBed {
     let element: JQLite = null;
     angular.mock.inject(function ($compile, $rootScope, $componentController) {
       let $scope = $rootScope.$new();
-
       element = $componentController(componentName, {
         $scope: $scope,
         $element: angular.element('<div></div>')
       });
-
     });
     (element as any).componentName = kebabToCamel(componentName);
     return element;
