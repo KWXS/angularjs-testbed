@@ -143,7 +143,7 @@ export class TestBed {
     // const $div = `<${selector}></${selector}>`;
     let element: JQLite = null;
     angular.mock.inject(function ($compile, $rootScope, $componentController) {
-      var $scope = $rootScope.$new();
+      let $scope = $rootScope.$new();
 
       element = $componentController(componentName, {
         $scope: $scope,
