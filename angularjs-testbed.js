@@ -186,8 +186,6 @@ var TestBed = /** @class */ (function () {
     };
     TestBed.prototype._compileComponent = function (component) {
         var componentName = getTypeName(component);
-        // const selector = camelToKebab(componentName);
-        // const $div = `<${selector}></${selector}>`;
         var element$$1 = null;
         mock.inject(function ($compile, $rootScope, $componentController) {
             var $scope = $rootScope.$new();
